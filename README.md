@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/python-3.12+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/streamlit-1.53+-red.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+![License](https://img.shields.io/badge/license-CCO-green.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
 An interactive web application for querying and exploring the African Medical Multimodal Fracture Dataset. Built for healthcare practitioners, researchers, and data scientists working with fracture data across African countries.
