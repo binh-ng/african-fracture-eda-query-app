@@ -187,7 +187,7 @@ The analysis generates **5 publication-quality PNG files** (300 DPI):
 ```
 african-fracture-eda/
 │
-├── african_fracture_eda.py          # Main analysis script
+├── african_fracture_eda.ipynb          # Main analysis script
 ├── README.md                         # This file
 ├── requirements.txt                  # Python dependencies
 │
@@ -227,12 +227,12 @@ pip install -r requirements.txt
 
 **Option 1: Local Python**
 ```bash
-python african_fracture_eda.py
+python african_fracture_eda.ipynb
 ```
 
 **Option 2: Google Colab**
 1. Open [Google Colab](https://colab.research.google.com/)
-2. Upload `african_fracture_eda.py` or copy-paste the code
+2. Upload `african_fracture_eda.ipynb` or copy-paste the code
 3. Run all cells
 
 ### Expected Runtime
