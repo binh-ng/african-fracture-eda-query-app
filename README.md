@@ -316,7 +316,7 @@ This project is licensed under the Creative Commons Zero v1.0 Universal  - see t
 For questions, suggestions, or collaborations:
 
 - **Email**: bill.nguyen.analytics@gmail.com
-- **LinkedIn**: [[Bill Nguyen]([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/binh-ng/))]
+- **LinkedIn**: https://www.linkedin.com/in/binh-ng/
 
 ## 📖 Citation
 
