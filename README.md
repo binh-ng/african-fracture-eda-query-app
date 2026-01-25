@@ -77,7 +77,7 @@ The application organizes patient data into five comprehensive tabs:
 
 ## 🚀 Live Demo
 
-Visit the live application: **[your-deployment-url.streamlit.app](your-deployment-url-here)**
+Visit the live application: **[your-deployment-url.streamlit.app]([your-deployment-url-here](https://uncapsized-superadaptably-lynell.ngrok-free.dev/))**
 
 ## 🛠️ Installation & Usage
 
