@@ -12,7 +12,7 @@ This repository contains a comprehensive exploratory data analysis (EDA) of the 
 
 - Analyze fracture type distributions and injury mechanisms across African regions
 - Examine clinical measurements (vital signs, pain assessments, anthropometric data) by fracture type
-- Investigate demographic patterns including age, gender, education, and socioeconomic factors
+- Investigate demographic patterns, including age, gender, education, and socioeconomic factors
 - Assess traditional medicine usage rates and cultural beliefs about injury treatment
 - Evaluate healthcare access barriers (distance, transportation, digital literacy)
 - Identify correlations between clinical, demographic, and environmental variables
@@ -24,7 +24,7 @@ This repository contains a comprehensive exploratory data analysis (EDA) of the 
 
 **Size**: 100+ patient records
 
-**Geographic Coverage**: Multiple African countries including Nigeria, Kenya, Ghana, Zimbabwe, Mali, Ethiopia, Tanzania, Uganda, and more
+**Geographic Coverage**: Multiple African countries, including Nigeria, Kenya, Ghana, Zimbabwe, Mali, Ethiopia, Tanzania, Uganda, and more
 
 ### Data Categories
 
@@ -106,7 +106,7 @@ The analysis generates **5 publication-quality PNG files** (300 DPI):
 - Gender distribution (pie chart)
 - Age distribution (histogram)
 - Top 10 countries (horizontal bar)
-- Region type, income level, education level distributions
+- Region type, income level, and education level distributions
 - Transportation mode and family size patterns
 
 ### 2. `02_clinical_measurements.png`
@@ -132,7 +132,7 @@ The analysis generates **5 publication-quality PNG files** (300 DPI):
 ### 4. `04_correlation_heatmap.png`
 - Comprehensive correlation matrix
 - 13 numeric variables analyzed
-- Color-coded correlation coefficients
+- Colour-coded correlation coefficients
 - Identification of strong positive/negative relationships
 
 ### 5. `05_relationships.png`
@@ -146,7 +146,7 @@ The analysis generates **5 publication-quality PNG files** (300 DPI):
   - Healthcare Distance vs Pain
   - Weight vs Height
   - O2 Saturation vs Heart Rate
-- All plots color-coded by fracture type
+- All plots colour-coded by fracture type
 
 ## 🔍 Key Findings
 
@@ -160,7 +160,7 @@ The analysis generates **5 publication-quality PNG files** (300 DPI):
 - **Geographic Barriers**: Average healthcare distance varies significantly by region
 - **Transportation**: Walking and public transport most common modes
 - **Digital Divide**: Variable phone ownership and digital literacy levels
-- **Insurance Coverage**: Mixed coverage across government, private, community, and none
+- **Insurance Coverage**: Mixed coverage across government, private, community, and non-profit
 
 ### Cultural Factors
 - **Traditional Medicine**: High usage rates (60-70%) across certain regions
@@ -169,7 +169,7 @@ The analysis generates **5 publication-quality PNG files** (300 DPI):
 - **Family Involvement**: High family involvement in medical decision-making
 
 ### Demographic Patterns
-- **Age Distribution**: Wide range from children to elderly
+- **Age Distribution**: Wide range from children to the elderly
 - **Gender**: Both male and female patients represented
 - **Education**: Varies from no formal education to tertiary level
 - **Income**: Predominantly low to middle income levels
