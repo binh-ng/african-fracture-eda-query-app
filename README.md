@@ -324,11 +324,11 @@ For questions, suggestions, or collaborations:
 If you use this analysis in your research, please cite:
 ```bibtex
 @software{african_fracture_eda,
-  author = Thanh Binh Nguyen,
+  author = {Thanh Binh Nguyen},
   title = {African Medical Multimodal Fracture Dataset - Exploratory Data Analysis},
   year = {2025},
   publisher = {GitHub},
-  url = {https://github.com/binh-ng/eda-african-medical-multimodal-fracture}
+  url = {https://github.com/binh-ng/african-fracture-eda}
 }
 ```
 
