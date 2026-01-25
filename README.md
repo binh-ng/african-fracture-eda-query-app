@@ -315,9 +315,8 @@ This project is licensed under the Creative Commons Zero v1.0 Universal  - see t
 
 For questions, suggestions, or collaborations:
 
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/african-fracture-eda/issues)
 - **Email**: bill.nguyen.analytics@gmail.com
-- **LinkedIn**: [[Your Profile](https://linkedin.com/in/yourprofile)](https://www.linkedin.com/in/binh-ng/)
+- **LinkedIn**: [[Bill Nguyen]([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/binh-ng/))]
 
 ## 📖 Citation
 
