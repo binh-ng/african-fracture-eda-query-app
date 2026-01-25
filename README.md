@@ -214,8 +214,8 @@ pip package manager
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/african-fracture-eda.git
-cd african-fracture-eda
+git clone https://github.com/binh-ng/eda-african-medical-multimodal-fracture.git
+cd eda-african-medical-multimodal-fracture
 ```
 
 2. **Install dependencies**
