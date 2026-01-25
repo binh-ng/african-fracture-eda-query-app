@@ -87,66 +87,51 @@ The dataset includes comprehensive multimodal information:
 - Nutritional status assessment
 - Anthropometric measurements
 
-### 6. Correlation Analysis
-- Pearson correlation matrix for numeric variables
-- Identification of strongest relationships
-- Multivariate pattern exploration
-
-### 7. Statistical Testing
+### 6. Statistical Testing
 - Kruskal-Wallis H-tests for group differences
 - Non-parametric testing across fracture types
 - Significance testing for clinical measurements
 
+### 7. Additional Insights
+- Mechanism of injury vs fracture type cross-tabulation
+- Traditional medicine usage by country
+- Pain scale by region type
+- Healthcare distance statistics
+- Digital literacy and phone ownership patterns
+
 ## 📈 Visualizations
 
-The analysis generates **5 publication-quality PNG files** (300 DPI):
+The analysis generates **3 publication-quality PNG files** (300 DPI):
 
 ### 1. `01_demographics.png`
+9 visualizations covering:
 - Fracture type distribution (bar chart)
 - Gender distribution (pie chart)
 - Age distribution (histogram)
 - Top 10 countries (horizontal bar)
-- Region type, income level, and education level distributions
-- Transportation mode and family size patterns
+- Region type distribution
+- Income level distribution
+- Education level distribution
+- Transportation mode distribution
+- Family size distribution (histogram)
 
-### 2. `02_clinical_measurements.png`
-- Mean heart rate by fracture type
-- Mean blood pressure (systolic/diastolic) by fracture type
-- Mean pain scale by fracture type
-- BMI distribution with health thresholds
-- Temperature distribution
-- Nutritional status (pie chart)
-- Oxygen saturation distribution
-- Pain scale by gender
-- Heart rate distribution
+### 2. `03_clinical_boxplots.png`
+Box plots for 6 key clinical metrics across fracture types:
+- Heart rate (bpm)
+- Systolic blood pressure (mmHg)
+- Pain scale (1-10)
+- Temperature (°C)
+- BMI
+- Oxygen saturation (%)
 
-### 3. `03_clinical_boxplots.png`
-- Box plots for 6 key clinical metrics across fracture types:
-  - Heart rate
-  - Systolic blood pressure
-  - Pain scale
-  - Temperature
-  - BMI
-  - Oxygen saturation
-
-### 4. `04_correlation_heatmap.png`
-- Comprehensive correlation matrix
-- 13 numeric variables analyzed
-- Colour-coded correlation coefficients
-- Identification of strong positive/negative relationships
-
-### 5. `05_relationships.png`
-- 9 scatter plots exploring key relationships:
-  - Age vs Pain Scale
-  - Heart Rate vs Pain Scale
-  - BMI vs Pain Scale
-  - Systolic vs Diastolic BP
-  - Temperature vs Heart Rate
-  - Age vs BMI
-  - Healthcare Distance vs Pain
-  - Weight vs Height
-  - O2 Saturation vs Heart Rate
-- All plots colour-coded by fracture type
+### 3. `fracture_summary.csv`
+Summary statistics table including:
+- Age (mean, std)
+- Heart rate (mean, std)
+- Systolic BP (mean, std)
+- Pain scale (mean, std)
+- BMI (mean, std)
+- Patient count by fracture type
 
 ## 🔍 Key Findings
 
@@ -160,7 +145,7 @@ The analysis generates **5 publication-quality PNG files** (300 DPI):
 - **Geographic Barriers**: Average healthcare distance varies significantly by region
 - **Transportation**: Walking and public transport most common modes
 - **Digital Divide**: Variable phone ownership and digital literacy levels
-- **Insurance Coverage**: Mixed coverage across government, private, community, and non-profit
+- **Insurance Coverage**: Mixed coverage across government, private, community, and none
 
 ### Cultural Factors
 - **Traditional Medicine**: High usage rates (60-70%) across certain regions
@@ -187,19 +172,14 @@ The analysis generates **5 publication-quality PNG files** (300 DPI):
 ```
 african-fracture-eda/
 │
-├── african_fracture_eda.ipynb        # Main analysis script
+├── african_fracture_eda.py          # Main analysis script
 ├── README.md                         # This file
 ├── requirements.txt                  # Python dependencies
 │
-├── outputs/                          # Generated outputs
-│   ├── 01_demographics.png
-│   ├── 02_clinical_measurements.png
-│   ├── 03_clinical_boxplots.png
-│   ├── 04_correlation_heatmap.png
-│   ├── 05_relationships.png
-│   └── fracture_summary.csv
-│
-└── data/                             # (Optional) Data cache
+└── outputs/                          # Generated outputs
+    ├── 01_demographics.png
+    ├── 03_clinical_boxplots.png
+    └── fracture_summary.csv
 ```
 
 ## 🚀 Getting Started
@@ -227,12 +207,12 @@ pip install -r requirements.txt
 
 **Option 1: Local Python**
 ```bash
-python african_fracture_eda.ipynb
+python african_fracture_eda.py
 ```
 
 **Option 2: Google Colab**
 1. Open [Google Colab](https://colab.research.google.com/)
-2. Upload `african_fracture_eda.ipynb` or copy-paste the code
+2. Upload `african_fracture_eda.py` or copy-paste the code
 3. Run all cells
 
 ### Expected Runtime
@@ -245,21 +225,40 @@ python african_fracture_eda.ipynb
 
 After running the analysis, you'll find:
 
-1. **5 PNG visualization files** (300 DPI, publication-ready)
+1. **2 PNG visualization files** (300 DPI, publication-ready)
+   - `01_demographics.png` - 9 demographic charts
+   - `03_clinical_boxplots.png` - 6 clinical boxplots
 2. **1 CSV summary table** (`fracture_summary.csv`) with statistics by fracture type
 3. **Console output** with detailed statistical results and insights
 
-## 📝 Statistical Methods
+## 📝 Analysis Workflow
+
+The script follows a 10-step process:
+
+1. **Data Loading** - Fetch from HuggingFace API and flatten JSON structure
+2. **Data Overview** - Display dataset info, first records, missing values, basic statistics
+3. **Demographic Analysis** - Country distribution, gender, age, region, education, income
+4. **Fracture Type Analysis** - Distribution, mechanism of injury, traditional medicine usage
+5. **Clinical Measurements** - Summary statistics for all vital signs and metrics
+6. **Demographics Visualization** - Generate 9-panel demographic chart
+7. **Clinical Boxplots** - Generate 6-panel clinical measurement boxplots
+8. **Additional Analysis** - Cross-tabs, traditional medicine by country, regional patterns
+9. **Statistical Tests** - Kruskal-Wallis tests for clinical measurements
+10. **Summary Table** - Generate and save fracture_summary.csv
+
+## 📈 Statistical Methods
 
 ### Tests Performed
 - **Kruskal-Wallis H-test**: Non-parametric test for differences across fracture types
-  - Applied to: heart rate, blood pressure, pain scale, temperature, BMI
+  - Applied to: heart rate, blood pressure (systolic), pain scale, temperature, BMI
   - Significance level: α = 0.05
+  - Results indicate whether clinical measurements differ significantly across fracture types
 
-### Correlation Analysis
-- **Pearson correlation coefficient** for numeric variables
-- Identification of the strongest positive/negative correlations
-- Heatmap visualization of correlation matrix
+### Descriptive Statistics
+- Mean, standard deviation, min, max for all numeric variables
+- Frequency counts and percentages for categorical variables
+- Cross-tabulations for mechanism of injury vs fracture type
+- Grouped statistics by fracture type, country, and region
 
 ## 🎓 Use Cases
 
@@ -285,11 +284,14 @@ Potential research questions this analysis can help answer:
 
 ## 🔄 Future Enhancements
 
-- [ ] Develop interactive dashboards (Plotly/Dash)
+- [ ] Add predictive modeling for fracture type classification
+- [ ] Include time-series analysis if temporal data available
+- [ ] Develop interactive dashboards (Plotly/Dash/Streamlit)
 - [ ] Add geospatial visualization for country-level patterns
 - [ ] Integrate natural language processing for clinical text analysis
 - [ ] Compare with global fracture datasets
 - [ ] Add survival analysis for recovery patterns
+- [ ] Expand correlation analysis with additional visualizations
 
 ## 🤝 Contributing
 
@@ -303,7 +305,7 @@ Contributions are welcome! Please feel free to:
 
 ## 📄 License
 
-This project is licensed under the Creative Commons Zero v1.0 Universal  - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Creative Commons Zero v1.0 Universal - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
