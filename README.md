@@ -187,7 +187,7 @@ The analysis generates **5 publication-quality PNG files** (300 DPI):
 ```
 african-fracture-eda/
 │
-├── african_fracture_eda.ipynb          # Main analysis script
+├── african_fracture_eda.ipynb        # Main analysis script
 ├── README.md                         # This file
 ├── requirements.txt                  # Python dependencies
 │
